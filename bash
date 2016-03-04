@@ -3,5 +3,5 @@
 CONTAINER=tvaughan/ubuntu
 VERSION=15.10
 CMD=$(basename $0)
-docker run --rm -i -t -v $PWD:/mnt/workdir -w /mnt/workdir $CONTAINER:$VERSION $CMD "$@"
+docker run --rm -i -t -v $PWD:/mnt/workdir $CONTAINER:$VERSION $CMD "$@"
 exit 0

@@ -17,6 +17,8 @@ RUN curl -sL -o dumb-init.deb                                                   
     && dpkg -i dumb-init.deb                                                                    \
     && rm -f dumb-init.deb
 
+WORKDIR /mnt/workdir
+
 # "--single-child" is required because of
 # https://github.com/Yelp/dumb-init/issues/51
 ENTRYPOINT ["dumb-init", "--single-child"]
